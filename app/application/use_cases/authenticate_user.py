@@ -2,6 +2,7 @@
 Caso de Uso: Autenticação de Usuário (Login).
 """
 
+import os
 from datetime import datetime, timedelta, timezone
 from fastapi import HTTPException, status
 from passlib.context import CryptContext
@@ -13,10 +14,7 @@ from app.presentation.schemas.auth_schema import LoginRequest, TokenResponse
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
-# Nota: Idealmente mover para um arquivo config/settings
-SECRET_KEY = "sua_chave_secreta_super_segura_aqui" 
-ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 60
+from app.core.config import SECRET_KEY, ALGORITHM, ACCESS_TOKEN_EXPIRE_MINUTES
 
 class AuthenticateUserUseCase:
     """Orquestra o login e a emissão do JWT."""

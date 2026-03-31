@@ -65,3 +65,11 @@ class SoftDeleteMixin:
         nullable=True, 
         doc="Data da exclusão lógica (Se Nulo = Registro Ativo)."
     )
+
+def get_db():
+    """Dependência para injeção da sessão de banco de dados no FastAPI."""
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
