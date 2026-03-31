@@ -5,7 +5,7 @@ Este documento mapeia todas as tarefas necessárias para a reconstrução do sis
 ## 🚀 ÉPICO 1: Setup Base e Contexto IAM (Identidade e Acesso)
 **Objetivo:** Levantar a fundação do projeto e garantir que usuários possam se registrar e autenticar.
 
-* [ ] **Tarefa 1.1 - Setup do Repositório (Antigravity):** Inicializar o projeto React (Vite) e a estrutura de pastas do FastAPI seguindo o DDD. Configurar o Docker base e variáveis de ambiente.
+* [X] **Tarefa 1.1 - Setup do Repositório (Antigravity):** Inicializar o projeto React (Vite) e a estrutura de pastas do FastAPI seguindo o DDD. Configurar o Docker base e variáveis de ambiente.
 * [ ] **Tarefa 1.2 - Modelagem de Dados IAM (Nexus):** Criar as entidades `User`, `Address` e `Audit` no SQLAlchemy e gerar a migration inicial no Alembic.
 * [ ] **Tarefa 1.3 - API de Autenticação (Programador):** Implementar os Use Cases e rotas (Endpoints) de Login (JWT), Registro de Usuário e Gestão de Endereços.
 * [ ] **Tarefa 1.4 - UI/UX Autenticação (Pixel + Programador):** Desenhar e implementar as telas de Login e Cadastro no React, integrando com a API.
